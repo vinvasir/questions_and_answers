@@ -11,7 +11,7 @@
         </div>
 
         @error('body')
-            <div class="alert alert-danger mt-3">{{ $message }}</div>
+        <div class="alert alert-danger mt-3">{{ $message }}</div>
         @enderror
     </form>
 
