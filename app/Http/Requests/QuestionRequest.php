@@ -27,4 +27,11 @@ class QuestionRequest extends FormRequest
             'body' => 'required|min:5|ends_with:?'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'body.ends_with' => "Your question must end with a question mark ('?')",
+        ];
+    }
 }

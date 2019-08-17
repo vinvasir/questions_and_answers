@@ -11,15 +11,15 @@
         </div>
 
         @error('body')
-        <div class="alert alert-danger mt-3">{{ $message }}</div>
+            <div class="alert alert-danger mt-3">{{ $message }}</div>
         @enderror
     </form>
 
     <h2 class="bg-primary p-5 text-center text-white">Questions</h2>
 
     @foreach($questions as $question)
-        <div class="border-bottom mb-3 justify-content-center align-items-stretch">
-            {{ $question->body }}
+        <div class="card p-3 border-bottom mb-3 justify-content-center align-items-stretch">
+            <p class="font-italic">"{{ $question->body }}"</p>
         </div>
     @endforeach
 @endsection
