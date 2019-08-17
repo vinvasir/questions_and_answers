@@ -13,3 +13,5 @@
 
 Route::get('/', 'QuestionController@index');
 Route::get('/questions', 'QuestionController@index');
+
+Route::post('/questions', 'QuestionController@store');

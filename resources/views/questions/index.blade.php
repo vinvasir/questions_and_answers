@@ -9,6 +9,10 @@
         <div class="text-center">
             <button class="btn btn-primary" type="submit">Just ask</button>
         </div>
+
+        @error('body')
+        <div class="alert alert-danger mt-3">{{ $message }}</div>
+        @enderror
     </form>
 
     <h2 class="bg-primary p-5 text-center text-white">Questions</h2>
