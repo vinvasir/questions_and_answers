@@ -21,4 +21,9 @@ class QuestionController extends Controller
 
         return redirect('questions', 201);
     }
+
+    public function show(Question $question)
+    {
+        return view('questions.show', compact('question'));
+    }
 }

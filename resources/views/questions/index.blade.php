@@ -19,7 +19,11 @@
 
     @foreach($questions as $question)
         <div class="card p-3 border-bottom mb-3 justify-content-center align-items-stretch">
-            <p class="font-italic">"{{ $question->body }}"</p>
+            <h4 class="font-italic">
+                <a href="/questions/{{$question->id}}" class="text-dark">
+                    "{{ $question->body }}"
+                </a>
+            </h4>
         </div>
     @endforeach
 @endsection
