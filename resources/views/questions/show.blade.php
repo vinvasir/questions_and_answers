@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <h3>
-     <a href="/" class="text-center font-weight-bold text-black-50">Back</a>
+    <h3 class="card">
+        <a href="/" class="text-center font-weight-bold text-black-50">Back</a>
     </h3>
 
     <h2 class="bg-primary p-5 text-center text-white">{{ $question->body }}</h2>
