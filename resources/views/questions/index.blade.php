@@ -4,7 +4,7 @@
     <form action="/questions" method="POST" class="border-bottom p-3">
         @csrf
         <div class="form-group">
-            <textarea name="body" id="body"  class="form-control">{{old('body')}}</textarea>
+            <textarea name="body" id="body"  class="form-control" placeholder="{{ old('body') ? null : $placeholder }}">{{old('body') ? old('body') : ''}}</textarea>
         </div>
         <div class="text-center">
             <button class="btn btn-primary" type="submit">Just ask</button>
@@ -24,6 +24,10 @@
                     "{{ $question->body }}"
                 </a>
             </h4>
+
+            <div class="align-self-end">
+                <span class="badge badge-primary">{{ $question->answers_count }} answers</span>
+            </div>
         </div>
     @endforeach
 @endsection
