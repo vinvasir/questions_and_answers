@@ -4,7 +4,7 @@
     <form action="/questions" method="POST" class="border-bottom p-3">
         @csrf
         <div class="form-group">
-            <textarea name="body" id="body"  class="form-control"></textarea>
+            <textarea name="body" id="body"  class="form-control">{{old('body')}}</textarea>
         </div>
         <div class="text-center">
             <button class="btn btn-primary" type="submit">Just ask</button>

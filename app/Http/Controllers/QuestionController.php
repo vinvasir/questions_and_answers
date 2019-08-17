@@ -19,6 +19,9 @@ class QuestionController extends Controller
     {
         Question::create(['body' => $request->body]);
 
+//        if (! $request->validated()) {
+//            return back();
+//        }
 
         return redirect('questions', 201);
     }
